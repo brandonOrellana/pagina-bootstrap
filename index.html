@@ -7,7 +7,7 @@
     <title>Bootstrap</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets/vendors/css/glightbox.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 </head>
@@ -62,10 +62,12 @@
             <div class="col-md-6 intros text-center">
               <div class="video-box">
                 <img src="images/arts/intro-section-illustration.png" class="img-fluid" alt="video illustration">
-                <a href="#" class="position-absolute top-50 start-50 translate-middle">
+                <a href="#" class="glightbox position-absolute top-50 start-50 translate-middle">
                   <span>
                     <i class="fas fa-play-circle"></i>
                   </span>
+                  <span class="border-animation border-animation--border-1"></span>
+                  <span class="border-animation border-animation--border-2"></span>
                 </a>
               </div>
             </div>
@@ -76,12 +78,16 @@
       </section>
       
 
-
-
-
-
-
-
+    <script src="assets/vendors/js/glightbox.min.js"></script>
+    <script type="text/javascript">
+      const lightbox = GLightbox({
+            'href': 'https://www.youtube.com/watch?v=PXMJ6FS7llk',
+            'type': 'video',
+            'source': 'youtube', //vimeo, youtube or local
+            'width': 900,
+            'autoPlayVideos': 'true',
+      });
+    </script>
     <script src="assets/js/bootstrap.bundle.js"></script>
 </body>
 </html>
